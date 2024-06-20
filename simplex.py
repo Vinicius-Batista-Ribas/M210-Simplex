@@ -39,16 +39,16 @@ def update_table(table, pivot_row, pivot_col):
         multiplier = table[row, pivot_col]
         table[row] -= multiplier * table[pivot_row]
 
-def solve_simplex(c, A, b, verbose=True):
+def solve_simplex(c, A, b):
     table = initialize_table(c, A, b)
     
     iteration = 0
     
     while not is_optimal(table):
-        if verbose:
-            print(f"Iteração {iteration}:")
-            print(np.round(table, 2)) 
-            print()
+
+        print(f"Iteração {iteration}:")
+        print(np.round(table, 2)) 
+        print()
         
         pivot_col = get_pivot_column(table)
         pivot_row = get_pivot_line(table, pivot_col)
@@ -56,10 +56,10 @@ def solve_simplex(c, A, b, verbose=True):
         
         iteration += 1
     
-    if verbose:
-        print(f"Iteração {iteration}:")
-        print(np.round(table, 2)) 
-        print()
+    
+    print(f"Iteração {iteration}:")
+    print(np.round(table, 2)) 
+    print()
 
     optimal_point = table[1:, -1]
     preco_sombra = table[0, :-1]
