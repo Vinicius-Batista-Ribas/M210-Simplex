@@ -49,9 +49,9 @@ from simplex import solve_simplex
 # b = np.array([250, 600, 500], dtype=float)
 
 # # Exemplo 2: 2 variaveis
-# c = np.array([20, 40], dtype=float)
-# A = np.array([[4, 15], [6, 30], [8, 16]], dtype=float)
-# b = np.array([60,30,32], dtype=float)
+c = np.array([20, 40], dtype=float)
+A = np.array([[4, 15], [6, 30], [8, 16]], dtype=float)
+b = np.array([60,30,32], dtype=float)
 
 # Exemplo 3: 3 variaveis
 # c = np.array([5, 4, 3], dtype=float)
